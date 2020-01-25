@@ -25,14 +25,14 @@ class Solution {
     }
 }
 
-fun main(args : Array<String>) {
+fun greedy.main(args : Array<String>) {
     val solution = Solution()
     val intArray = intArrayOf(2,36,1,3)
     solution.solution(intArray, 1)
 }*/
 /*
 
-fun main(args: Array<String>) {
+fun greedy.main(args: Array<String>) {
 
     val test = intArrayOf(1,2,3,4,5)
     val sol = Solution()

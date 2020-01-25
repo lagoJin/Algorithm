@@ -30,7 +30,7 @@
 .idea/modules.xml
 .idea/vcs.xml
 .idea/.gitignore
-*.iml
+.idea/$PRODUCT_WORKSPACE_FILE$
 
 # Gradle
 .idea/**/gradle.xml
