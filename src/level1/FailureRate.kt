@@ -6,11 +6,36 @@ import assertEquals
 class FailureRate {
 
     fun solution(N: Int, stages: IntArray): IntArray {
-        var answer = intArrayOf()
+        val answer = IntArray(N)
         var peopleCount = stages.size
-        val list = stages.toMutableList()
 
+        val map = HashMap<Int, Int>()
 
+        for (stage in stages) {
+            if (map.containsKey(stage)) {
+                map[stage] = map.getValue(stage) + 1
+            } else {
+                map[stage] = 1
+            }
+
+        }
+
+        val resultMap = HashMap<Int, Double>()
+
+        for (i in 1..N) {
+            if (map.containsKey(i)) {
+                resultMap[i] = (map.getValue(i) / peopleCount.toDouble())
+                peopleCount -= map.getValue(i)
+            } else {
+                resultMap[i] = 0.0
+            }
+        }
+
+        val list = resultMap.toList().sortedByDescending { (_, value) -> value }
+
+        for (i in 0 until N) {
+            answer[i] = list[i].first
+        }
 
         return answer
     }
