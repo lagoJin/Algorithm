@@ -39,7 +39,7 @@ class FunctionDevelop {
                     break
                 }
             }
-            list.add(day)
+            list.add(day) 
         }
         println(list.toString())
 

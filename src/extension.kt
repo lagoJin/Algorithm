@@ -2,7 +2,7 @@ fun <T> T.assertEquals(value: T) {
     //val thread = Thread.currentThread().stackTrace[2]
     //println("method : ${thread.fileName} lineNUmber : ${thread.lineNumber}")
 
-    if (this is IntArray && value is IntArray) {
+    if (this is Array<*> && value is Array<*>) {
         println("value : ${value.contentToString()} return : ${this.contentToString()}")
         println("result : ${this contentEquals value}")
     } else {
