@@ -6,8 +6,6 @@ import assertEquals
 class YearCheck {
 
     fun solution(a: Int, b: Int): String {
-        var answer = ""
-
         var day = 0
         val month = intArrayOf(0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30)
         val list = arrayOf("FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU")

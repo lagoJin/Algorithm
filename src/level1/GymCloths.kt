@@ -1,3 +1,7 @@
+package level1
+
+import assertEquals
+
 class GymCloths {
 
     fun equalValue(lost: IntArray, reserve: IntArray): ArrayList<Int> {

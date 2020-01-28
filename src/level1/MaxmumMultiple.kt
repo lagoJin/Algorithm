@@ -10,7 +10,7 @@ class MaxmumMultiple {
         val answer = ArrayList<Int>()
 
         var min = 0
-        var max = 0
+        val max: Int
 
         for (i in 1 until n + 1) {
             if (n % i == 0 && m % i == 0) {

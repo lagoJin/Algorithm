@@ -1,13 +1,11 @@
-package level2
+package level2.ready
 
 import assertEquals
 import java.util.*
-import kotlin.collections.HashMap
 
 class FunctionDevelop {
 
     fun solution(progresses: IntArray, speeds: IntArray): IntArray {
-        var answer = intArrayOf()
         val queue = LinkedList<Int>()
 
         var count = 0
@@ -41,6 +39,7 @@ class FunctionDevelop {
             }
             list.add(day) 
         }
+        list.removeAt(list.size - 1)
         println(list.toString())
 
         return list.toIntArray()

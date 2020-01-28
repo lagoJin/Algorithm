@@ -1,4 +1,4 @@
-package level2
+package level2.ready
 
 import assertEquals
 
@@ -18,26 +18,21 @@ class ParenthesisTransformation {
     fun solution(p: String): String {
         var answer = ""
         if (p == "") return ""
-        val result = p.replace("()", "-")
-        return if (result.replace("-", "") == "()") {
-            p
-        } else {
-            for (i in result.indices) {
-                when (result[i]) {
-                    '(' -> {
-                        answer += ')'
-                    }
-                    ')' -> {
-                        answer += '('
-                    }
-                    '-' -> {
-                        answer += "()"
-                    }
-                }
-            }
-            answer
+
+        val u = p.textToUV()[0]
+        val v = p.textToUV()[1]
+
+        if (u == "()") {
+
         }
+
+        return ""
     }
+
+    fun String.textToUV(): List<String> {
+        return this.split("()")
+    }
+
 }
 
 fun main() {
@@ -46,4 +41,5 @@ fun main() {
     parenthesisTransformation.solution(")(").assertEquals("()")
     parenthesisTransformation.solution("()))((()").assertEquals("()(())()")
     parenthesisTransformation.solution("()()()()").assertEquals("(((())))")
+    parenthesisTransformation.solution("))((").assertEquals("(())")
 }

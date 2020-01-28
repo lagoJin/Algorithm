@@ -1,7 +1,6 @@
-package level2
+package level2.success
 
 import assertEquals
-import kotlin.math.max
 
 class MaximumAndMinimum {
 

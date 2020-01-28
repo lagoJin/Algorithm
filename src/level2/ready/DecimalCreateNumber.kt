@@ -1,7 +1,6 @@
-package level2
+package level2.ready
 
 import assertEquals
-import java.util.*
 
 //https://programmers.co.kr/learn/courses/30/lessons/12977
 class DecimalCreateNumber {

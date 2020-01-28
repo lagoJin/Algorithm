@@ -12,7 +12,7 @@ class Math {
         var cnt2 = 0
         var cnt3 = 0
 
-        var max = 0
+        var max: Int
 
         answers.forEachIndexed { index, i ->
             if (answers[index] == answer1[index % answer1.size]) {
@@ -45,12 +45,16 @@ class Math {
             answer.add(1)
             answer.add(3)
         } else {
-            if (max == cnt1) {
-                answer.add(1)
-            } else if (max == cnt2) {
-                answer.add(2)
-            } else if (max == cnt3) {
-                answer.add(3)
+            when (max) {
+                cnt1 -> {
+                    answer.add(1)
+                }
+                cnt2 -> {
+                    answer.add(2)
+                }
+                cnt3 -> {
+                    answer.add(3)
+                }
             }
         }
 
