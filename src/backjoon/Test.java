@@ -15,6 +15,7 @@ public class Test {
     public int solution(String s, String t) {
         int result = 0;
 
+        int test = 0;
         while(s.contains(t)){
             s = s.replace(t, "");
             result++;
